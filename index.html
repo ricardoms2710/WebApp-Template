@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ricardo de Magalhães Simões">
+        <!-- <meta http-equiv="refresh" content="3;url=https://www.mySystem.com"> -->
+        <title>🚫 JS error handling</title>
+        <link rel="stylesheet" href="ui_design.css">
+    </head>
+    <body>
+        <center>
+            <h1>My website/service/application</h1>
+            <hr>
+                <div id="menu" class="menu"></div>
+            <hr>
+                <div id="system" class="system"></div>
+            <hr>
+                <div id="status" class="status"></div>
+            <hr>
+        </center>
+
+    <script src="base.js"></script>
+    <script src="sys_error.js"></script>
+    <script src="sys_status.js"></script>
+    <script src="http_server.js"></script>
+    <script src="interface.js"></script>
+    <script src="program.js"></script>
+    <script src="pack1.js"></script>
+    <script src="functions.js"></script>
+    <script> 
+        _log("INDEX.HTML", "script", "INI");
+
+        var program = new Program(); 
+        _log("INDEX.HTML", "script", "program", program);
+        program.Main(); 
+    </script>
+    </body>
+</html>

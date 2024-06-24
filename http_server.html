@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTTP Server test</title>
+        <script src="base.js"></script>
+        <script src="sys_error.js"></script>
+        <script src="sys_status.js"></script>
+        <script src="http_server.js"></script>
+    </head>
+    <script>
+        var server = new HTTPServer();
+        var objeto = { nome: "ricardo de magalhães simões", idade:45 };
+        console.log("HTTP_SERVER.HTML", "objeto", objeto);
+        server.Send(objeto);
+    </script>
+</html>

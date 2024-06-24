@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>arguments.callee.caller</title>
+	</head>
+	<body>
+		<script>
+			var Error_Heap = Array();
+			class MyClass 
+			{
+				constructor() {
+					this.Age = 2000;
+					this.timer = 0;
+				}
+				MyBase() {  console.log("MyBase()", this);  }
+				MyMethod(){ console.log("MyMethod()", this); this.MyBase(); }
+				MyCatch() { 
+					try{ var resp=0/div; console.log(resp); return resp; } 
+					catch(e){ Error_Heap.push(e); console.log("MyCatch()"); } 
+					finally{ console.log("finally"); }
+				}
+			}
+
+            function base() { console.log("base()" ); console.trace(); }
+			function test() { console.log("test()",arguments.callee.caller ); base(); }
+
+            test();
+			
+			obj = new MyClass();
+			obj.MyMethod();
+			obj.MyCatch(0);
+			console.log(Error_Heap)
+		</script>
+	</body>
+</html>

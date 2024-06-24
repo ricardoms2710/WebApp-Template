@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+html, body { width: 100vw; height: 100vh; }
+
+h1 { font-size: 3rem; }
+
+.menu ul li { 
+    display: inline-block; 
+    margin: 0.25rem;
+    width: 10rem;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: lightgray;
+}
+
+.system {
+    width: 53rem;
+    height: 30rem;
+    background-color: lightskyblue;
+}
+
+.status table { border-collapse: collapse; }
+
+.status_bar { 
+    width: 1rem; 
+    height: 1rem;
+    text-align: center; 
+    background-color: gray; 
+}
